@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://htmlcheatsheet.com/jquery/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Online jQuery Cheat Sheet</title>
+
+		<link href="jquery-ui.css" rel="stylesheet">
+		<link rel="stylesheet" href="cheatsheet.css">
+		
+	<link rel="stylesheet" type="text/css" id="u0" href="skin.min.css">
+</head>
+	<body class="jspage" style="">
+		<div id="pagewrap">		
+			<div id="tabContainer" class="">
+				<div class="mainContent">	
+				<div class="masonryPanels" style="position: relative;height: 4084px;">
+					<div class="masonryPanelWrap noPencil" id="firstGridItem" style="position: absolute; left: 250px; top: 0px;">
+					</div><div class="masonryPanelWrap noPencil visibleGrid" id="gridId1" style="z-index: 500;position: absolute;left: 200px;top: 50px;">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>Basics</h2>
+							<div class="panelHelper">Introduction to jQuery programming </div>
+							<div class="panelInner">
+								<h4>Include</h4>
+								
+								<a href="https://code.jquery.com/" target="_blank" rel="nofollow">Download</a>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable1" onclick="selectText(&quot;selectable1&quot;)"><span style="color:#1c02ff">&lt;<span style="font-weight:700">script</span> <span style="font-style:italic">src</span>=<span style="color:#d80800">"https://code.jquery.com/jquery-latest.min.js"</span> <span style="font-style:italic">type</span>=<span style="color:#d80800">"text/javascript"</span>&gt;&lt;/<span style="font-weight:700">script</span>&gt;</span>
+</pre>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable2" onclick="selectText(&quot;selectable2&quot;)"><span style="color:#1c02ff">&lt;<span style="font-weight:700">script</span> <span style="font-style:italic">src</span>=<span style="color:#d80800">"https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"</span>&gt;&lt;/<span style="font-weight:700">script</span>&gt;</span>
+</pre>
+								<h4>Syntax</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable3" onclick="selectText(&quot;selectable3&quot;)"><span style="color:#687687">$</span>(<span style="color:#6d79de;font-weight:700">document</span>).ready(function(){
+    <span style="color:#687687">$</span>(<span style="color:#d80800">".demo"</span>).<span style="color:#3c4c72;font-weight:700">click</span>(function(){
+        <span style="color:#687687">$</span>(<span style="color:#0206ff;font-style:italic">this</span>).hide(<span style="color:#cd0000;font-style:italic">200</span>);
+    });
+});
+</pre>
+<div class="preToEditorWrap" style="display: block;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable4" onclick="selectText(&quot;selectable4&quot;)"><span style="color:#687687">$</span>(function(){
+   <span style="color:#00b418" class="jsComment">// Short Document Ready</span>
+});
+</pre>
+								<h4>Each</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable5" onclick="selectText(&quot;selectable5&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">".demo"</span>).each(function() {                <span style="color:#00b418" class="jsComment">// parse each .demo element</span>
+    <span style="color:#6d79de;font-weight:700">document</span>.<span style="color:#3c4c72;font-weight:700">write</span>(<span style="color:#687687">$</span>(<span style="color:#0206ff;font-style:italic">this</span>).<span style="color:#06960e;font-weight:700">text</span>() <span style="color:#687687">+</span> <span style="color:#d80800">"<span style="color:#26b31a">\n</span>"</span>);  <span style="color:#00b418" class="jsComment">// output their text</span>
+});
+</pre>
+								<h4>Trigger</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable6" onclick="selectText(&quot;selectable6&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"a#mylink"</span>).trigger(<span style="color:#d80800">"click"</span>); <span style="color:#00b418" class="jsComment">// triggers event on an element</span>
+</pre>
+								<h4>noConflict</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable7" onclick="selectText(&quot;selectable7&quot;)">var jq <span style="color:#687687">=</span> <span style="color:#687687">$</span>.noConflict();            <span style="color:#00b418" class="jsComment">// avoid conflict with other frameworks also using the dollar sign</span>
+jq(<span style="color:#6d79de;font-weight:700">document</span>).ready(function(){
+    jq(<span style="color:#d80800">"#demo"</span>).<span style="color:#06960e;font-weight:700">text</span>(<span style="color:#d80800">"Hello World!"</span>);
+});
+</pre>
+							</div>
+						</div>
+					</div>
+
+					
+					
+					<div class="masonryPanelWrap noPencil visibleGrid" id="gridId2" style="position: absolute;left: 200px;top: 602px;">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>Selectors</h2>
+							<div class="panelHelper">Selectors to target elements. Similar to CSS. </div>
+							<div class="panelInner">
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable8" onclick="selectText(&quot;selectable8&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"*"</span>)                      <span style="color:#00b418" class="jsComment">// all elements</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"p.demo"</span>)                 <span style="color:#00b418" class="jsComment">// &lt;p&gt; elements with class="intro"</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"p:first"</span>)                <span style="color:#00b418" class="jsComment">// the first &lt;p&gt; element</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"p span"</span>)                 <span style="color:#00b418" class="jsComment">// span, descendant of p</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"p &gt; span"</span>)               <span style="color:#00b418" class="jsComment">// span, direct child of p</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"p + span"</span>)               <span style="color:#00b418" class="jsComment">// span immediately proceeded by a p</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"p ~ span"</span>)               <span style="color:#00b418" class="jsComment">// strong element proceeded by p</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"ul li:first"</span>)            <span style="color:#00b418" class="jsComment">// the first &lt;li&gt; element of the first &lt;ul&gt;</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"ul li:first-child"</span>)      <span style="color:#00b418" class="jsComment">// the first &lt;li&gt; element of every &lt;ul&gt;</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"ul li:nth-child(3)"</span>)     <span style="color:#00b418" class="jsComment">// third child</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"[href]"</span>)                 <span style="color:#00b418" class="jsComment">// any element with an href attribute</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"a[target='_blank']"</span>)     <span style="color:#00b418" class="jsComment">// &lt;a&gt; elements with a target "_blank" attribute</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"a[target!='_blank']"</span>)    <span style="color:#00b418" class="jsComment">// &lt;a&gt; elements with a target attribute value other than "_blank"</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">":input"</span>)                 <span style="color:#00b418" class="jsComment">// all form elements</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">":button"</span>)                <span style="color:#00b418" class="jsComment">// &lt;button&gt; and &lt;input&gt; elements of type="button"</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"tr:even"</span>)                <span style="color:#00b418" class="jsComment">// even &lt;tr&gt; elements</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"tr:odd"</span>)                 <span style="color:#00b418" class="jsComment">// odd &lt;tr&gt; elements</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"span:parent"</span>)            <span style="color:#00b418" class="jsComment">// element which has child element</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"span:contains('demo')"</span>)  <span style="color:#00b418" class="jsComment">// element conaining the specified text</span>
+</pre>
+								<h4>Actions</h4>
+								<strong>$(selector).action()</strong>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable9" onclick="selectText(&quot;selectable9&quot;)"><span style="color:#687687">$</span>(<span style="color:#0206ff;font-style:italic">this</span>).hide()      <span style="color:#00b418" class="jsComment">// the current element</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"div"</span>).hide()     <span style="color:#00b418" class="jsComment">// all &lt;div&gt; elements</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">".demo"</span>).hide()   <span style="color:#00b418" class="jsComment">// all elements with class="demo"</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).hide()   <span style="color:#00b418" class="jsComment">// the element with id="demo"</span>
+</pre>
+							</div>
+						</div>
+					</div>
+					
+					<div class="masonryPanelWrap noPencil visibleGrid" id="gridId3" style="position: absolute;left: 200px;top: 1088px;">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>Events</h2>
+							<div class="panelHelper">Trigger jQuery events </div>
+							<div class="panelInner">
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable10" onclick="selectText(&quot;selectable10&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">".demo"</span>).<span style="color:#3c4c72;font-weight:700">click</span>(function(){
+    <span style="color:#687687">$</span>(<span style="color:#0206ff;font-style:italic">this</span>).hide(<span style="color:#cd0000;font-style:italic">200</span>);
+});
+</pre>
+								<h4>Mouse</h4>
+								scroll, click, dblclick, mousedown, mouseup, mousemove, mouseover, mouseout, mouseenter, mouseleave, load, resize, scroll, unload, error
+								<h4>Keyboard</h4>
+								keydown, keypress, keyup
+								<h4>Form</h4>
+								submit, change, focus, blur
+								<h4>DOM Element</h4>
+								blur, focus, focusin, focusout, change, select, submit
+								<h4>Browser</h4>
+								load, resize, scroll, unload, error
+								<h4>.bind()</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable11" onclick="selectText(&quot;selectable11&quot;)"><span style="color:#687687">$</span>(<span style="color:#6d79de;font-weight:700">document</span>).ready(function() {              <span style="color:#00b418" class="jsComment">// attach a handler to an event for the elements        </span>
+    <span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).bind(<span style="color:#d80800">'blur'</span>, function(e) {
+        <span style="color:#00b418" class="jsComment">//dom event fired</span>
+    });
+});
+</pre>
+							</div>
+						</div>
+					</div>
+					
+					<div class="masonryPanelWrap noPencil" id="gridId4" style="position: absolute; left: 250px; top: -35px; z-index: 600; height: 20px; display: none; transition-property: opacity, transform; transition-duration: 0.4s; transform: translate3d(0px, 1589px, 0px);">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>Ads</h2>
+							<div class="panelHelper">Otherwise we're starving. </div>
+							<div class="panelInner">
+								<div class="reklamocska">
+									<script async="" src="./Online jQuery Cheat Sheet_files/f.txt"></script>
+									<!-- Rectangle -->
+									<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9728962508602593" data-ad-slot="1534550908"></ins>
+									<script>
+									(adsbygoogle = window.adsbygoogle || []).push({});
+									</script>
+								</div>								
+							</div>
+						</div>
+					</div>
+					
+					<div class="masonryPanelWrap noPencil visibleGrid" id="gridId5" style="position: absolute;left: 200px;top: 1554px;">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>Effects</h2>
+							<div class="panelHelper">Animation effects </div>
+							<div class="panelInner">
+								<h4>Hide / Show</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable12" onclick="selectText(&quot;selectable12&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).hide();      <span style="color:#00b418" class="jsComment">// sets to display: none</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).show(<span style="color:#cd0000;font-style:italic">200</span>);   <span style="color:#00b418" class="jsComment">// shows hidden elemnt with animation (speed)</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).toggle();    <span style="color:#00b418" class="jsComment">// toggle between show and hide</span>
+
+<span style="color:#687687">$</span>( <span style="color:#d80800">"#element"</span> ).hide( <span style="color:#d80800">"slow"</span>, function() {  <span style="color:#00b418" class="jsComment">// hide with callback function</span>
+    <span style="font-style:italic">console</span><span style="color:#3c4c72;font-weight:700">.log</span>( <span style="color:#d80800">"Animation complete."</span> );
+});
+</pre>
+								<h4>Fade</h4>
+								fadeIn, fadeOut, fadeToggle, fadeTo
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable13" onclick="selectText(&quot;selectable13&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).fadeIn();                <span style="color:#00b418" class="jsComment">// fade in a hidden element</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).fadeOut(<span style="color:#cd0000;font-style:italic">300</span>);            <span style="color:#00b418" class="jsComment">// fade out</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).fadeToggle(<span style="color:#d80800">"slow"</span>);      <span style="color:#00b418" class="jsComment">// toggle between fadeIn and hadeOut</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).fadeTo(<span style="color:#d80800">"slow"</span>, <span style="color:#cd0000;font-style:italic">0.25</span>);    <span style="color:#00b418" class="jsComment">// fades to 0.25 opacity</span>
+</pre>
+								<h4>Slide</h4>
+								slideDown, slideUp, slideToggle
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable14" onclick="selectText(&quot;selectable14&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).slideDown();
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).slideUp(<span style="color:#d80800">"slow"</span>);
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).slideToggle();
+</pre>
+								<h4>Animate</h4>
+								$(selector).animate({params},speed,callback);
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable15" onclick="selectText(&quot;selectable15&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"div"</span>).animate({
+    opacity: <span style="color:#d80800">'0.5'</span>,
+    left: <span style="color:#d80800">'200px'</span>,
+    height: <span style="color:#d80800">'200px'</span>
+});
+</pre>
+								<h4>stop() Method</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable16" onclick="selectText(&quot;selectable16&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).<span style="color:#3c4c72;font-weight:700">stop</span>();
+</pre>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable17" onclick="selectText(&quot;selectable17&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">'#demo'</span>).mouseleave(function(<span style="color:#6d79de;font-weight:700">event</span>) {     <span style="color:#00b418" class="jsComment">// hover end</span>
+    <span style="color:#687687">$</span>(<span style="color:#d80800">'.tab'</span>).<span style="color:#3c4c72;font-weight:700">stop</span>().animate({              <span style="color:#00b418" class="jsComment">// stop() method</span>
+        opacity : <span style="color:#d80800">'0.5'</span>,
+        marginTop: <span style="color:#d80800">'10px'</span>
+    }, <span style="color:#cd0000;font-style:italic">500</span>, function() {                    <span style="color:#00b418" class="jsComment">// animation complete</span>
+        <span style="color:#687687">$</span>(<span style="color:#d80800">'#demo'</span>).removeClass(<span style="color:#d80800">'hovered'</span>);  <span style="color:#00b418" class="jsComment">// callback function</span>
+    });
+});
+<span style="color:#687687">$</span>(<span style="color:#d80800">'#demo'</span>).mouseover(function(<span style="color:#6d79de;font-weight:700">event</span>) {      <span style="color:#00b418" class="jsComment">// hover begin</span>
+    <span style="color:#687687">$</span>(<span style="color:#d80800">'.tab'</span>).<span style="color:#3c4c72;font-weight:700">stop</span>().animate({              <span style="color:#00b418" class="jsComment">// stop() method</span>
+        opacity : <span style="color:#d80800">'1'</span>,
+        marginTop: <span style="color:#d80800">'0px'</span>
+    }, <span style="color:#cd0000;font-style:italic">300</span>, function() {                    <span style="color:#00b418" class="jsComment">// animation complete</span>
+        <span style="color:#687687">$</span>(<span style="color:#d80800">'#demo'</span>).addClass(<span style="color:#d80800">'hovered'</span>);     <span style="color:#00b418" class="jsComment">// callback function</span>
+    });
+});
+</pre>
+								<h4>Chaining</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable18" onclick="selectText(&quot;selectable18&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).css(<span style="color:#d80800">"backgroundColor"</span>, <span style="color:#d80800">"green"</span>).slideUp(<span style="color:#cd0000;font-style:italic">500</span>).slideDown(<span style="color:#cd0000;font-style:italic">500</span>);
+</pre>
+
+							</div>
+						</div>
+					</div>
+					
+					<div class="masonryPanelWrap noPencil visibleGrid" id="gridId6" style="position: absolute;left: 200px;top: 2466px;">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>DOM Manipulation</h2>
+							<div class="panelHelper">Accessing and manipulating the Document Object Model </div>
+							<div class="panelInner">
+								<h4>Content</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable19" onclick="selectText(&quot;selectable19&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).<span style="color:#06960e;font-weight:700">text</span>();                  <span style="color:#00b418" class="jsComment">// returns text content</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).html();                  <span style="color:#00b418" class="jsComment">// returns content, including HTML markup</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).val();                   <span style="color:#00b418" class="jsComment">// returns field value</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).html(<span style="color:#d80800">'Hey &lt;em&gt;yo&lt;/em&gt;'</span>); <span style="color:#00b418" class="jsComment">// sets HTML content</span>
+</pre>
+								<h4>Attributes</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable20" onclick="selectText(&quot;selectable20&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#link"</span>).attr(<span style="color:#d80800">"href"</span>);                    <span style="color:#00b418" class="jsComment">// get an attribute</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#link"</span>).attr(<span style="color:#d80800">"href"</span>,<span style="color:#d80800">'https://htmlg.com'</span>); <span style="color:#00b418" class="jsComment">// set attribute</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#link"</span>).attr({
+    <span style="color:#d80800">"href"</span> : <span style="color:#d80800">"https://htmlg.com"</span>,            <span style="color:#00b418" class="jsComment">// setting multiple attributes</span>
+    <span style="color:#d80800">"title"</span> : <span style="color:#d80800">"HTML Editor"</span>
+});
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#link"</span>).attr(<span style="color:#d80800">"href"</span>, function(i, origValue){
+    <span style="color:#0100b6;font-weight:700">return</span> origValue <span style="color:#687687">+</span> <span style="color:#d80800">"/help"</span>;             <span style="color:#00b418" class="jsComment">// callback function gets and changes the attribute</span>
+});
+</pre>
+								<h4>Add</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable21" onclick="selectText(&quot;selectable21&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">".demo"</span>).prepend(<span style="color:#d80800">"Yo!"</span>);          <span style="color:#00b418" class="jsComment">// adds content at the beginning in the selected elements</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">".demo"</span>).append(<span style="color:#d80800">"&lt;em&gt;Hey!&lt;/em&gt;"</span>); <span style="color:#00b418" class="jsComment">// adds content at the end in the selected elements</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">".demo"</span>).before(<span style="color:#d80800">"Cheers"</span>);        <span style="color:#00b418" class="jsComment">// adds content before the selected elements</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">".demo"</span>).after(<span style="color:#d80800">"&lt;em&gt;Peace&lt;/em&gt;"</span>); <span style="color:#00b418" class="jsComment">// adds content after the selected elements</span>
+</pre>
+								<h4>Remove</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable22" onclick="selectText(&quot;selectable22&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).<span style="color:#3c4c72;font-weight:700">remove</span>();            <span style="color:#00b418" class="jsComment">// removes the selected element</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).empty();             <span style="color:#00b418" class="jsComment">// removes children</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"div"</span>).<span style="color:#3c4c72;font-weight:700">remove</span>(<span style="color:#d80800">".cl1, .cl2"</span>);  <span style="color:#00b418" class="jsComment">// removes divs with the listed classes</span>
+</pre>
+								<h4>Classes</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable23" onclick="selectText(&quot;selectable23&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).addClass(<span style="color:#d80800">"big red"</span>); <span style="color:#00b418" class="jsComment">// add class</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"h1, p"</span>).removeClass(<span style="color:#d80800">"red"</span>);  <span style="color:#00b418" class="jsComment">// remove class</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).toggleClass(<span style="color:#d80800">"big"</span>);  <span style="color:#00b418" class="jsComment">// toggle between adding and removing</span>
+</pre>
+								<h4>CSS</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable24" onclick="selectText(&quot;selectable24&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).css(<span style="color:#d80800">"background-color"</span>);     <span style="color:#00b418" class="jsComment">// returns CSS value</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).css(<span style="color:#d80800">"color"</span>, <span style="color:#d80800">"blue"</span>);        <span style="color:#00b418" class="jsComment">// sets CSS rule</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).css({<span style="color:#d80800">"color"</span>: <span style="color:#d80800">"blue"</span>, <span style="color:#d80800">"font-size"</span>: <span style="color:#d80800">"20px"</span>}); <span style="color:#00b418" class="jsComment">// sets multiple CSS properties</span>
+</pre>
+								<h4>Dimensions</h4>
+								width, height, innerWidth, innerHeight, outerWidth, outerHeight<br>
+								<em><strong>inner</strong> - includes padding<br>
+								<strong>outer</strong> - includes padding and border</em>
+							</div>
+						</div>
+					</div>
+					
+					<div class="masonryPanelWrap noPencil visibleGrid" id="gridId7" style="position: absolute;left: 200px;top: 3222px;">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>Traversing</h2>
+							<div class="panelHelper">Select elements based on their relation to other elements. </div>
+							<div class="panelInner">
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable25" onclick="selectText(&quot;selectable25&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).<span style="color:#06960e;font-weight:700">parent</span>();                <span style="color:#00b418" class="jsComment">// accessing direct parent</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"span"</span>).<span style="color:#06960e;font-weight:700">parent</span>().hide();          <span style="color:#00b418" class="jsComment">// changing parent color</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).parents();               <span style="color:#00b418" class="jsComment">// all ancestors of the element</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).parentsUntil(<span style="color:#d80800">"#demo2"</span>);  <span style="color:#00b418" class="jsComment">// all ancestors between two - demo is inside demo2</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).children();              <span style="color:#00b418" class="jsComment">// all direct children</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).children(<span style="color:#d80800">".first"</span>);      <span style="color:#00b418" class="jsComment">// all direct children having a specified class</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).<span style="color:#3c4c72;font-weight:700">find</span>(<span style="color:#d80800">"span"</span>);            <span style="color:#00b418" class="jsComment">// all span elements inside #demo</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).<span style="color:#3c4c72;font-weight:700">find</span>(<span style="color:#d80800">"*"</span>);               <span style="color:#00b418" class="jsComment">// all descendants</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).siblings(<span style="color:#d80800">"span"</span>);        <span style="color:#00b418" class="jsComment">// span siblings of #demo</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).<span style="color:#06960e;font-weight:700">next</span>();                  <span style="color:#00b418" class="jsComment">// the next sibling</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"p"</span>).nextAll();                   <span style="color:#00b418" class="jsComment">// all next siblings</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).nextUntil(<span style="color:#d80800">"#demo2"</span>);     <span style="color:#00b418" class="jsComment">// siblings between two arguments</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).prev();                  <span style="color:#00b418" class="jsComment">// the previous sibling</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"p"</span>).prevAll();                   <span style="color:#00b418" class="jsComment">// all previous siblings</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).prevUntil(<span style="color:#d80800">"#demo2"</span>);     <span style="color:#00b418" class="jsComment">// previous siblings between two arguments</span>
+</pre>
+								<h4>Filtering</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable26" onclick="selectText(&quot;selectable26&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"span strong"</span>).first();   <span style="color:#00b418" class="jsComment">// first strong in first span</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"span strong"</span>).last();    <span style="color:#00b418" class="jsComment">// last strong in last span</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"div"</span>).eq(<span style="color:#cd0000;font-style:italic">9</span>);             <span style="color:#00b418" class="jsComment">// element with a specific index</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"div"</span>).filter(<span style="color:#d80800">".big"</span>);    <span style="color:#00b418" class="jsComment">// all div elements with .big class</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"div"</span>).not(<span style="color:#d80800">".big"</span>);       <span style="color:#00b418" class="jsComment">// opposite of filter</span>
+</pre>
+							</div>
+						</div>
+					</div>
+					
+					<div class="masonryPanelWrap noPencil" id="gridId8" style="position: absolute; left: 250px; top: -35px; z-index: 600; height: 20px; display: none; transition-property: opacity, transform; transition-duration: 0.4s; transform: translate3d(0px, 3680px, 0px);">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>Ads</h2>
+							<div class="panelHelper">Otherwise we're starving. </div>
+							<div class="panelInner">
+								<div class="reklamocska">
+									<script async="" src="./Online jQuery Cheat Sheet_files/f.txt"></script>
+									<!-- Rectangle -->
+									<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9728962508602593" data-ad-slot="1534550908"></ins>
+									<script>
+									(adsbygoogle = window.adsbygoogle || []).push({});
+									</script>
+								</div>								
+							</div>
+						</div>
+					</div>
+					
+					<div class="masonryPanelWrap noPencil visibleGrid" id="gridId9" style="position: absolute;left: 200px;top: 3645px;">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>Ajax</h2>
+							<div class="panelHelper">Exchanging data with the server dynamically updating parts of the page. </div>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable27" onclick="selectText(&quot;selectable27&quot;)"><span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).<span style="color:#3c4c72;font-weight:700">load</span>(<span style="color:#d80800">"file.txt h1.main"</span>);                                <span style="color:#00b418" class="jsComment">// returns the h1 tag in the text file</span>
+<span style="color:#687687">$</span>(<span style="color:#d80800">"#demo"</span>).<span style="color:#3c4c72;font-weight:700">load</span>(<span style="color:#d80800">"file.txt"</span>, function(responseTxt, statusTxt, xhr){  <span style="color:#00b418" class="jsComment">// callback function</span>
+    <span style="color:#0100b6;font-weight:700">if</span>(statusTxt <span style="color:#687687">==</span> <span style="color:#d80800">"success"</span>) {
+        <span style="color:#6d79de;font-weight:700">document</span>.<span style="color:#3c4c72;font-weight:700">write</span>(<span style="color:#d80800">"Content loaded successfully!"</span>); 
+    } <span style="color:#0100b6;font-weight:700">else</span> {
+        <span style="color:#6d79de;font-weight:700">document</span>.<span style="color:#3c4c72;font-weight:700">write</span>(<span style="color:#d80800">"Error: "</span> <span style="color:#687687">+</span> xhr.<span style="color:#06960e;font-weight:700">status</span> <span style="color:#687687">+</span> <span style="color:#d80800">": "</span> <span style="color:#687687">+</span> xhr.<span style="color:#06960e;font-weight:700">statusText</span>); 
+    }
+});
+</pre>
+							<div class="panelInner">
+								<h4>$.get()</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable28" onclick="selectText(&quot;selectable28&quot;)"><span style="color:#687687">$</span>.get(<span style="color:#d80800">"demo.asp"</span>, function(data, status){       <span style="color:#00b418" class="jsComment">//$.get(URL,callback);</span>
+    <span style="color:#6d79de;font-weight:700">document</span>.<span style="color:#3c4c72;font-weight:700">write</span>(<span style="color:#d80800">"Data: "</span> <span style="color:#687687">+</span> data <span style="color:#687687">+</span> <span style="color:#d80800">"<span style="color:#26b31a">\n</span>Status: "</span> <span style="color:#687687">+</span> status);
+});
+</pre>
+								<h4>$.post()</h4>
+<div class="preToEditorWrap" style="display: none;"><a class="preToEditor" title="Send to editor">✎</a></div><pre style="color:#000" id="selectable29" onclick="selectText(&quot;selectable29&quot;)"><span style="color:#687687">$</span>.post(<span style="color:#d80800">"demo.asp"</span>,      <span style="color:#00b418" class="jsComment">// send HTTP POST request to a page and get the answer</span>
+{
+    name: <span style="color:#d80800">"John"</span>,       <span style="color:#00b418" class="jsComment">// send data</span>
+    age: <span style="color:#cd0000;font-style:italic">30</span>
+},
+function(data, status){ <span style="color:#00b418" class="jsComment">//retreive response</span>
+    <span style="font-style:italic">console</span><span style="color:#3c4c72;font-weight:700">.log</span>(<span style="color:#d80800">"Data: "</span> <span style="color:#687687">+</span> data <span style="color:#687687">+</span> <span style="color:#d80800">"<span style="color:#26b31a">\n</span>Status: "</span> <span style="color:#687687">+</span> status);
+});
+</pre>
+							</div>
+						</div>
+					</div>
+					
+					<div class="masonryPanelWrap noPencil" id="gridId10" style="position: absolute; left: 250px; top: -35px; z-index: 600; height: 20px; display: none; transition-property: opacity, transform; transition-duration: 0.4s; transform: translate3d(0px, 4119px, 0px);">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>Useful Links</h2>
+							<div class="panelHelper">A list of free useful resources. </div>
+							<div class="panelInner">
+								<div class="buttonkaLista">
+									<a href="https://jquery.com/" target="_blank" rel="nofollow">jQuery</a>
+									<a href="https://jqueryui.com/" target="_blank" rel="nofollow">jQuery UI</a>
+									<a href="https://html-cleaner.com/js/" target="_blank" rel="nofollow">JS cleaner</a>
+									<a href="https://javascriptobfuscator.com/Javascript-Obfuscator.aspx" target="_blank" rel="nofollow">JS Obfuscator</a>
+									<a href="https://html-online.com/articles/category/jquery/" target="_blank" rel="nofollow">Articles</a>
+									<a href="https://caniuse.com/" target="_blank" rel="nofollow">Can I use?</a>
+									<!--
+									<a href="#" target="_blank" rel="nofollow">Link</a>
+									-->
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="masonryPanelWrap noPencil" id="gridId11" style="position: absolute; left: 250px; top: -35px; z-index: 600; height: 20px; display: none; transition-property: opacity, transform; transition-duration: 0.4s; transform: translate3d(0px, 4119px, 0px);">
+						<div class="masonryPanel"><div class="wrapPanelControls"><a class="panelHelp" title="Help">?</a><a class="moveToTop" title="Move to the top">↖</a><a class="minimizePanel" title="Hide panel">x</a></div>
+							<h2>Ads</h2>
+							<div class="panelHelper">Otherwise we're starving. </div>
+							<div class="panelInner">
+								<div class="reklamocska">
+									<script async="" src="./Online jQuery Cheat Sheet_files/f.txt"></script>
+									<!-- Rectangle -->
+									<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9728962508602593" data-ad-slot="1534550908"></ins>
+									<script>
+									(adsbygoogle = window.adsbygoogle || []).push({});
+									</script>
+								</div>								
+							</div>
+						</div>
+					</div>
+		
+					<!--
+					<div class="descriptionListing noscroller">
+						<div><span> </span><em> </em></div>
+					</div>
+					
+					<div class="masonryPanelWrap noPencil">
+						<div class="masonryPanel">
+							<h2>Title</h2>
+							<div class="panelHelper">Help stuff. </div>
+							<div class="panelInner">
+								<div class="wrapCharCodes">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					-->					
+				</div>	
+
+					
+
+				</div>
+		
+			</div>	<!-- .mainContent   -->
+
+
+		</div> 
+
+<script>
+</script>
+	
+</body></html>
